@@ -5,6 +5,7 @@ import { SITE_TITLE } from '../consts';
 
 <header>
 	<nav>
+		<img width="50" height="50" src="favicon.svg" alt="centrale nucleaire">
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
@@ -28,11 +29,12 @@ import { SITE_TITLE } from '../consts';
 	h2 a,
 	h2 a.active {
 		text-decoration: none;
+		white-space: nowrap;
 	}
 	nav {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: start;
 	}
 	nav a {
 		padding: 1em 0.5em;
@@ -44,13 +46,13 @@ import { SITE_TITLE } from '../consts';
 		text-decoration: none;
 		border-bottom-color: var(--accent);
 	}
-	.social-links,
-	.social-links a {
-		display: flex;
+	.internal-links,
+	.internal-links a {
+		padding-left: 25vw;
 	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
+	@media (max-width: 810px) {
+		.internal-links {
+			padding-left: 0;
 		}
 	}
 </style>
