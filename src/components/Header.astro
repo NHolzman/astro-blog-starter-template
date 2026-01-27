@@ -5,7 +5,7 @@ import { SITE_TITLE } from '../consts';
 
 <header>
 	<nav>
-		<img width="50" height="50" src="favicon.svg" alt="centrale nucleaire">
+		<img width="50" height="50" src="/favicon.svg" alt="centrale nucleaire">
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
@@ -46,13 +46,12 @@ import { SITE_TITLE } from '../consts';
 		text-decoration: none;
 		border-bottom-color: var(--accent);
 	}
-	.internal-links,
-	.internal-links a {
-		padding-left: 25vw;
+	.internal-links {
+		margin-left: 25vw;
 	}
 	@media (max-width: 810px) {
 		.internal-links {
-			padding-left: 0;
+			margin-left: 0;
 		}
 	}
 </style>
