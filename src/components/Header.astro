@@ -1,12 +1,16 @@
 ---
 import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import { SITE_TITLE_0 } from '../consts';
+import { SITE_TITLE_1 } from '../consts';
 ---
 
 <header>
 	<nav>
 		<img width="50" height="50" src="/favicon.svg" alt="centrale nucleaire">
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<h2>
+			<a id="titre0" href="/">{SITE_TITLE_0}</a>
+			<b href="/">{SITE_TITLE_1}</b>
+		</h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			{false && <HeaderLink href="/blog">Blog</HeaderLink>}
@@ -27,7 +31,9 @@ import { SITE_TITLE } from '../consts';
 	}
 
 	h2 a,
-	h2 a.active {
+	h2 b
+	h2 a.active,
+	h2 b.active {
 		text-decoration: none;
 		white-space: nowrap;
 	}
@@ -47,11 +53,16 @@ import { SITE_TITLE } from '../consts';
 		border-bottom-color: var(--accent);
 	}
 	.internal-links {
-		margin-left: 25vw;
+		margin: auto 0;
 	}
-	@media (max-width: 810px) {
-		.internal-links {
-			margin-left: 0;
+	@media (max-width: 515px) {
+		h2 a {
+			visibility: hidden;
+		}
+		h2 a::after {
+			visibility: visible;
+			white-space: pre-line;
+			content: SITE_TITLE_0+"\n";
 		}
 	}
 </style>
