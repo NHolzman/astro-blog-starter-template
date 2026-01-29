@@ -8,7 +8,7 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		<img width="50" height="50" src="/favicon.svg" alt="centrale nucleaire">
 		<h2>
 			<a id="titre0" href="/">{SITE_TITLE_0}</a>
-			<b href="/">{SITE_TITLE_1}</b>
+			<a id="titre1" href="/">{SITE_TITLE_1}</a>
 		</h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
@@ -27,15 +27,13 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 	h2 {
 		margin: 0;
 		font-size: 1em;
-		max-width: min-content;
 	}
 
 	h2 a,
-	h2 b,
-	h2 a.active,
-	h2 b.active {
+	h2 a.active {
 		text-decoration: none;
 		white-space: nowrap;
+		padding: 1em 0;
 	}
 	nav {
 		display: flex;
@@ -54,5 +52,10 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 	}
 	.internal-links {
 		margin: 0 auto;
+	}
+	@media  (max-width: 515px) {
+		h2 {
+			max-width: min-content;
+		}
 	}
 </style>
