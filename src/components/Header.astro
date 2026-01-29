@@ -27,10 +27,11 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 	h2 {
 		margin: 0;
 		font-size: 1em;
+		max-width: min-content;
 	}
 
 	h2 a,
-	h2 b
+	h2 b,
 	h2 a.active,
 	h2 b.active {
 		text-decoration: none;
@@ -52,16 +53,6 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		border-bottom-color: var(--accent);
 	}
 	.internal-links {
-		margin: auto 0;
-	}
-	@media (max-width: 515px) {
-		h2 a {
-			visibility: hidden;
-		}
-		h2 a::after {
-			visibility: visible;
-			white-space: pre-line;
-			content: SITE_TITLE_0+"\n";
-		}
+		margin: 0 auto;
 	}
 </style>
