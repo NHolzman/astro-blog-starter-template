@@ -3,4 +3,5 @@
 
 export const SITE_TITLE_0 = "Le comité";
 export const SITE_TITLE_1 = "pro-énergie nucléaire";
-export const SITE_DESCRIPTION = "Welcome to my website!";
+export const SITE_DESCRIPTION = "Le site officiel.";
+export const SITE_IMAGE = "/favicon.svg";
