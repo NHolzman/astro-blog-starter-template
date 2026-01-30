@@ -5,7 +5,7 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 
 <header>
 	<nav>
-		<img id="logo" width="50" height="50" src="/favicon.svg" alt="centrale nucleaire">
+		<a href="/"><img id="logo" width="50" height="50" src="/favicon.svg" alt="centrale nucleaire"></a>
 		<h2>
 			<a id="titre0" href="/">{SITE_TITLE_0}</a>
 			<a id="titre1" href="/">{SITE_TITLE_1}</a>
@@ -64,11 +64,8 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 			max-width: min-content;
 		}
 	}
-	@media  (max-width: 500px) {
-		header {
-			padding: 0 1em;
-		}
-		#logo {
+	@media  (max-width: 400px) {
+		h2 {
 			display: none;
 		}
 	}
