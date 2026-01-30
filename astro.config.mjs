@@ -14,4 +14,7 @@ export default defineConfig({
 			enabled: true,
 		},
 	}),
+	redirects: {
+    "/": "https://pronucleaire.org/home",
+  	},
 });
