@@ -5,7 +5,7 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 
 <header>
 	<nav>
-		<img width="50" height="50" src="/favicon.svg" alt="centrale nucleaire">
+		<img id="logo" width="50" height="50" src="/favicon.svg" alt="centrale nucleaire">
 		<h2>
 			<a id="titre0" href="/">{SITE_TITLE_0}</a>
 			<a id="titre1" href="/">{SITE_TITLE_1}</a>
@@ -13,8 +13,8 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		<div class="internal-links">
 			<!-- <HeaderLink href="/">Home</HeaderLink> -->
 			<!-- <HeaderLink href="/blog">Blog</HeaderLink> -->
-			<HeaderLink href="/about">About</HeaderLink>
-			<HeaderLink href="/projet">Projet en cours</HeaderLink>
+			<HeaderLink href="/about">À propos</HeaderLink>
+			<HeaderLink href="/projet">Projet actuel</HeaderLink>
 		</div>
 	</nav>
 </header>
@@ -53,10 +53,23 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 	}
 	.internal-links {
 		margin: 0 auto;
+		font-size: 0.85em;
 	}
-	@media  (max-width: 575px) {
+	@media  (max-width: 625px) {
+		header {
+			padding-left: 0;
+			padding-right: 0;
+		}
 		h2 {
 			max-width: min-content;
+		}
+	}
+	@media  (max-width: 500px) {
+		header {
+			padding: 0 1em;
+		}
+		#logo {
+			display: none;
 		}
 	}
 </style>
