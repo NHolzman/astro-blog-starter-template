@@ -30,8 +30,11 @@ import Layout from '../layouts/BlogPost.astro';
 
     /* mobile fallback */
     @media (max-width: 720px) {
-      .image-text, image-text.right {
+      .image-text {
         flex-direction: column;
+      }
+      .image-text.right {
+        flex-direction: column-reverse;
       }
     }
   </style>
