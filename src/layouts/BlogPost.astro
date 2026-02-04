@@ -1,6 +1,5 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import Body from '../components/Body.astro';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -55,7 +54,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		</style>
 	</head>
 
-	<Body>
+	<body>
 		<Header />
 		<main>
 			<article>
@@ -82,5 +81,5 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			</article>
 		</main>
 		<Footer />
-	</Body>
+	</body>
 </html>
