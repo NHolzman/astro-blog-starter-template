@@ -42,6 +42,7 @@ body {
 	color: rgb(var(--gray-dark));
 	font-size: 20px;
 	line-height: 1.7;
+	transition: 0.1s;
 }
 main {
 	width: 720px;
