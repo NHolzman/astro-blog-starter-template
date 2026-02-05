@@ -5,10 +5,10 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 
 <header>
 	<nav>
-		<a title="Accueil" href="/">
-			<img id="logo" width="50" height="50" src="/logo.jpg">
-		</a>
 		<h2 title="Accueil">
+			<a title="Accueil" href="/">
+				<img id="logo" width="50" height="50" src="/logo.jpg">
+			</a>
 			<a id="titre0" href="/">{SITE_TITLE_0}</a>
 			<a id="titre1" href="/">{SITE_TITLE_1}</a>
 		</h2>
@@ -33,7 +33,7 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		translate: 50px;
 	}
 	h2:hover {
-		text-shadow: 0 0 8px rgba(0, 243, 255, 0.55);
+		text-shadow: 0 0 8px rgba(0, 255, 200, 0.55);
 	}
 
 	h2 a,
@@ -63,18 +63,17 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 	}
 	#logo {
 		position: absolute !important;
-  		translate: 0 -50% !important;
+  		translate: -100% -30% !important;
 		display: block !important;
 		transition: 0.5s;
-		border-style: solid;
+		border-style: dotted;
 		border-radius: 0;
-		border-width: 0;
+		border-width: 2px;
 		border-color: white;
 	}
-	#logo:hover {
-		scale: 1.25;
-		border-radius: 9999px;
-		border-width: 1px;
+	h2:hover #logo {
+		scale: 1.05;
+		border-radius: 50%;
 		border-color: #14ff00;
 	}
 	@media  (max-width: 625px) {
