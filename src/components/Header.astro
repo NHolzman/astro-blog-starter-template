@@ -64,7 +64,6 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 	#logo {
 		position: absolute !important;
   		translate: -100% -30% !important;
-		display: block !important;
 		transition: 0.5s;
 		transition-property: scale, border-radius, border-color;
 		border-style: dotted;
@@ -93,6 +92,9 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 	@media  (max-width: 420px) {
 		h2 {
 			display: none;
+		}
+		#logo {
+			display: block !important;
 		}
 	}
 </style>
