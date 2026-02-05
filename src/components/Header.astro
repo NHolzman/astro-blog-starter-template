@@ -5,7 +5,9 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 
 <header>
 	<nav>
-		<a id="logo" title="Accueil" href="/"><img width="50" height="50" src="/favicon.svg"></a>
+		<a title="Accueil" href="/">
+			<img id="logo" width="50" height="50" src="/logo.jpg">
+		</a>
 		<h2 title="Accueil">
 			<a id="titre0" href="/">{SITE_TITLE_0}</a>
 			<a id="titre1" href="/">{SITE_TITLE_1}</a>
@@ -28,6 +30,7 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 	h2 {
 		margin: 0;
 		font-size: 1em;
+		translate: 50px;
 	}
 	h2:hover {
 		text-shadow: 0 0 8px rgba(0, 243, 255, 0.55);
@@ -59,7 +62,19 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		font-size: 0.85em;
 	}
 	#logo {
-		padding: 0 !important;
+		position: absolute !important;
+  		translate: -100% -25% !important;
+		display: block !important;
+		border-style: solid;
+		border-radius: 0;
+		border-width: 0;
+		border-color: white;
+	}
+	#logo:hover {
+		scale: 1.25;
+		border-radius: 9999px;
+		border-width: 1px;
+		border-color: #14ff00;
 	}
 	@media  (max-width: 625px) {
 		header {
@@ -69,6 +84,9 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		h2 {
 			max-width: min-content;
 			padding-bottom: 0 !important;
+		}
+		#logo {
+			translate: -100% -12.5% !important;
 		}
 	}
 	@media  (max-width: 420px) {
