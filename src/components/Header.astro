@@ -62,6 +62,8 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		font-size: 0.85em;
 	}
 	#logo {
+		min-width: 50px !important;
+		min-height: 50px !important;
 		position: absolute !important;
   		translate: -100% -30% !important;
 		transition: 0.5s;
@@ -92,6 +94,9 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 	@media  (max-width: 420px) {
 		#titre0, #titre1 {
 			display: none;
+		}
+		#logo {
+			translate: -100% -25% !important;
 		}
 	}
 </style>
