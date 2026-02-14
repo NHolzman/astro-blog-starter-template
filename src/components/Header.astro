@@ -19,164 +19,122 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 			<HeaderLink href="/projet">Projet actuel</HeaderLink>
 		</div>
 
-		<!-- Hidden checkbox -->
-		<input id="burger-toggle" type="checkbox" />
+		<!-- MOBILE MENU WRAPPER -->
+		<div class="mobile-menu">
+			<input id="burger-toggle" type="checkbox" />
 
-		<!-- Burger icon -->
-		<label for="burger-toggle" class="burger-icon">
-			<svg xmlns="http://www.w3.org/2000/svg"
-				width="24" height="24"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round">
-				<path d="M4 5h16 M4 12h16 M4 19h16"></path>
-			</svg>
-		</label>
+			<label for="burger-toggle" class="burger-icon">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
 
-		<!-- Mobile menu -->
-		<aside class="burger-panel">
-			<ul>
-				<li><a href="/about">À propos</a></li>
-				<li><a href="/projet">Projet actuel</a></li>
-			</ul>
-		</aside>
+			<div class="burger-panel">
+				<a href="/about">À propos</a>
+				<a href="/projet">Projet actuel</a>
+			</div>
+		</div>
 
 	</nav>
 </header>
 
 <style>
 	header {
-		margin: 0;
 		padding: 0 1em;
 		background: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
 		height: 4em;
-		align-content: center;
+		display: flex;
+		align-items: center;
 		position: relative;
 	}
 
 	nav {
 		display: flex;
 		align-items: center;
-		height: 100%;
+		width: 100%;
 	}
 
 	h2 {
 		margin: 0;
 		font-size: 1em;
 		translate: 50px;
-		height: 100%;
-		align-content: center;
-	}
-
-	h2:hover {
-		text-shadow: 0 0 8px rgba(0, 255, 200, 0.55);
-	}
-
-	h2 a {
-		text-decoration: none;
-		white-space: nowrap;
-		padding: 1em 0 !important;
-	}
-
-	nav a {
-		padding: 0 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-		height: 95%;
-		align-content: center;
-	}
-
-	nav a.active {
-		border-bottom-color: var(--accent);
+		position: relative;
 	}
 
 	.internal-links {
 		margin: 0 auto;
-		font-size: 0.85em;
-		height: 100%;
 		display: flex;
-		align-items: center;
+		gap: 1em;
 	}
 
-	/* Logo */
+	/* LOGO */
 	#logo {
-		min-width: 50px;
-		min-height: 50px;
 		position: absolute;
 		translate: -100% -30%;
-		transition: 0.5s;
-		transition-property: scale, border-radius, border-color;
-		border-style: dotted;
-		border-radius: 0;
-		border-width: 2px;
-		border-color: white;
+		border: 2px dotted white;
+		transition: 0.3s;
 	}
 
 	h2:hover #logo {
-		scale: 1.05;
 		border-radius: 50%;
 		border-color: #00ff73;
 	}
 
-	/* Burger base state */
+	/* MOBILE MENU BASE */
+	.mobile-menu {
+		display: none;
+		margin-left: auto;
+		position: relative;
+	}
+
 	#burger-toggle {
 		display: none;
 	}
 
 	.burger-icon {
-		display: none;
-		margin-left: auto;
+		width: 24px;
+		height: 18px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		cursor: pointer;
+	}
+
+	.burger-icon span {
+		height: 3px;
+		background: black;
+		border-radius: 2px;
 	}
 
 	.burger-panel {
 		display: none;
 		position: absolute;
-		top: 4em;
+		top: 3em;
 		right: 0;
 		background: white;
-		width: 200px;
 		box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 		padding: 1em;
+		width: 180px;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
 	}
 
-	.burger-panel ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
+	/* THIS IS THE IMPORTANT LINE */
+	#burger-toggle:checked ~ .burger-panel {
+		display: flex;
 	}
 
-	.burger-panel li {
-		padding: 0.5em 0;
-	}
-
-	.burger-panel a {
-		text-decoration: none;
-		color: var(--black);
-	}
-
-	/* Mobile */
+	/* MOBILE BREAKPOINT */
 	@media (max-width: 540px) {
 
 		.internal-links {
-			display: none !important;
+			display: none;
 		}
 
-		.burger-icon {
+		.mobile-menu {
 			display: block;
-		}
-
-		#burger-toggle:checked ~ .burger-panel {
-			display: block;
-		}
-
-		#logo {
-			translate: -100% -12.5%;
 		}
 	}
 </style>
