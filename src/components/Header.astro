@@ -5,33 +5,48 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 
 <header>
 	<nav>
+
 		<h2 title="Accueil">
 			<a title="Accueil" href="/">
-				<img id="logo" width="50" height="50" src="/logo.jpg">
+				<img id="logo" width="50" height="50" src="/logo.jpg" />
 			</a>
 			<a id="titre0" href="/">{SITE_TITLE_0}</a>
 			<a id="titre1" href="/">{SITE_TITLE_1}</a>
 		</h2>
+
 		<div class="internal-links">
-			<!-- <HeaderLink href="/">Home</HeaderLink> -->
-			<!-- <HeaderLink href="/blog">Blog</HeaderLink> -->
 			<HeaderLink href="/about">À propos</HeaderLink>
 			<HeaderLink href="/projet">Projet actuel</HeaderLink>
 		</div>
-		<div class="burger-icon">
-			<input type="checkbox">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" aria-hidden="true" class="lucide lucide-menu">
+
+		<!-- Hidden checkbox -->
+		<input id="burger-toggle" type="checkbox" />
+
+		<!-- Burger icon -->
+		<label for="burger-toggle" class="burger-icon">
+			<svg xmlns="http://www.w3.org/2000/svg"
+				width="24" height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round">
 				<path d="M4 5h16 M4 12h16 M4 19h16"></path>
 			</svg>
-		</div>
+		</label>
+
+		<!-- Mobile menu -->
 		<aside class="burger-panel">
-				<ul>
-					<li>À propos</li>
-					<li>Projet actuel</li>
-				</ul>
+			<ul>
+				<li><a href="/about">À propos</a></li>
+				<li><a href="/projet">Projet actuel</a></li>
+			</ul>
 		</aside>
+
 	</nav>
 </header>
+
 <style>
 	header {
 		margin: 0;
@@ -40,7 +55,15 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
 		height: 4em;
 		align-content: center;
+		position: relative;
 	}
+
+	nav {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+
 	h2 {
 		margin: 0;
 		font-size: 1em;
@@ -48,50 +71,44 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		height: 100%;
 		align-content: center;
 	}
+
 	h2:hover {
 		text-shadow: 0 0 8px rgba(0, 255, 200, 0.55);
 	}
 
-	h2 a,
-	h2 a.active {
+	h2 a {
 		text-decoration: none;
 		white-space: nowrap;
 		padding: 1em 0 !important;
 	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: start;
-		height: 100%;
-	}
+
 	nav a {
 		padding: 0 0.5em;
 		color: var(--black);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
 		height: 95%;
-    	align-content: center;
+		align-content: center;
 	}
+
 	nav a.active {
-		text-decoration: none;
 		border-bottom-color: var(--accent);
 	}
+
 	.internal-links {
 		margin: 0 auto;
 		font-size: 0.85em;
 		height: 100%;
+		display: flex;
+		align-items: center;
 	}
-	.burger-icon {
-		margin-left: auto;
-	}
-	.burger-icon, .burger-panel {
-		display: none;
-	}
+
+	/* Logo */
 	#logo {
-		min-width: 50px !important;
-		min-height: 50px !important;
-		position: absolute !important;
-  		translate: -100% -30% !important;
+		min-width: 50px;
+		min-height: 50px;
+		position: absolute;
+		translate: -100% -30%;
 		transition: 0.5s;
 		transition-property: scale, border-radius, border-color;
 		border-style: dotted;
@@ -99,36 +116,67 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		border-width: 2px;
 		border-color: white;
 	}
+
 	h2:hover #logo {
 		scale: 1.05;
 		border-radius: 50%;
 		border-color: #00ff73;
 	}
-	@media  (max-width: 625px) {
-		header {
-			padding-left: 0;
-			padding-right: 0;
-		}
-		h2 {
-			max-width: min-content;
-			padding-bottom: 0 !important;
-		}
-		#logo {
-			translate: -100% -12.5% !important;
-		}
+
+	/* Burger base state */
+	#burger-toggle {
+		display: none;
 	}
-	@media  (max-width: 540px) {
-		.internal-links, .internal-links a {
+
+	.burger-icon {
+		display: none;
+		margin-left: auto;
+		cursor: pointer;
+	}
+
+	.burger-panel {
+		display: none;
+		position: absolute;
+		top: 4em;
+		right: 0;
+		background: white;
+		width: 200px;
+		box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+		padding: 1em;
+	}
+
+	.burger-panel ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.burger-panel li {
+		padding: 0.5em 0;
+	}
+
+	.burger-panel a {
+		text-decoration: none;
+		color: var(--black);
+	}
+
+	/* Mobile */
+	@media (max-width: 540px) {
+
+		.internal-links {
 			display: none !important;
 		}
+
 		.burger-icon {
 			display: block;
 		}
-		input:checked + svg {
-			display: border 1px solid black;
+
+		#burger-toggle:checked ~ .burger-panel {
+			display: block;
 		}
+
 		#logo {
-			translate: -100% -12.5% !important;
+			translate: -100% -12.5%;
 		}
 	}
 </style>
