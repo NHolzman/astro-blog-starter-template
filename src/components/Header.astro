@@ -122,9 +122,9 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 	}
 
 	/* THIS IS THE IMPORTANT LINE */
-	#burger-toggle:checked ~ .burger-panel {
-		display: flex;
-	}
+	:global(#burger-toggle:checked ~ .burger-panel) {
+	display: flex;
+}
 
 	/* MOBILE BREAKPOINT */
 	@media (max-width: 540px) {
