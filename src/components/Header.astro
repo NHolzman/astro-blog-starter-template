@@ -85,8 +85,9 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 	}
 	.burger-icon {
 		margin-left: auto;
+		display: none;
 	}
-	.burger-icon, .burger-panel {
+	.burger-panel {
 		display: none;
 	}
 	#logo {
@@ -120,20 +121,22 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		}
 	}
 	@media  (max-width: 540px) {
-		#titre0, #titre1 {
-			display: none;
-		}
-		#logo {
-			translate: -100% -50% !important;
-		}
-		.internal-links a ~ * {
+		.internal-links ~ * {
 			display: none !important;
 		}
 		.burger-icon {
 			display: block;
 		}
-		#burgercheck:checked~.burger-panel {
+		#burgercheck:checked ~ .burger-panel {
 			display: block;
+		}
+	}
+	@media  (max-width: 420px) {
+		#titre0, #titre1 {
+			display: none;
+		}
+		#logo {
+			translate: -100% -50% !important;
 		}
 	}
 </style>
