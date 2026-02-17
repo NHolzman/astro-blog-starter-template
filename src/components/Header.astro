@@ -120,24 +120,20 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		}
 	}
 	@media  (max-width: 540px) {
-		<!--#titre0, #titre1 {
+		#titre0, #titre1 {
 			display: none;
 		}
 		#logo {
 			translate: -100% -50% !important;
-		}-->
-
-		HeaderLink {
+		}
+		.internal-links a ~ * {
 			display: none !important;
 		}
 		.burger-icon {
 			display: block;
 		}
 		#burgercheck:checked~.burger-panel {
-			display: border 1px solid black;
-		}
-		#logo {
-			translate: -100% -12.5% !important;
+			display: block;
 		}
 	}
 </style>
