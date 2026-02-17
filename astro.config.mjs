@@ -15,6 +15,6 @@ export default defineConfig({
 		},
 	}),
 	redirects: {
-    "/": "https://pronucleaire.org/home",
+    '/': '/about',
   	},
 });
