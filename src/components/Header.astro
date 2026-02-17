@@ -121,14 +121,14 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		}
 	}
 	@media  (max-width: 540px) {
-		.internal-links ~ * {
+		HeaderLink ~ * {
 			display: none !important;
 		}
 		.burger-icon {
-			display: block;
+			display: block !important;
 		}
 		#burgercheck:checked ~ .burger-panel {
-			display: block;
+			display: block !important;
 		}
 	}
 	@media  (max-width: 420px) {
