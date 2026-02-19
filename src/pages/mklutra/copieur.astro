@@ -1,28 +1,54 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BlogPost from "../../layouts/BlogPost.astro";
+
+const title = "Copieur professionnel – Guide complet";
+const description = "Découvrez comment choisir un copieur professionnel adapté à vos besoins : vitesse, coût par page, fonctionnalités et conseils d’achat.";
+const pubDate = new Date("2026-02-18");
+const author = "MK Lutra";
 ---
 
-<Layout
-	title="À propos"
-	description="Le site officiel - description"
-	pubDate={new Date('January 25 2026')}
-	heroImage="/Civaux-bw.JPG"
+<BlogPost
+  title={title}
+  description={description}
+  pubDate={pubDate}
+  author={author}
 >
-	<p>
-		L'objectif principal est d'innover et d'améliorer les infrastructures énergétiques sous forme 
-		de maquettes à l'école avec nos propres moyens. Ces maquettes ont pour but de démontrer l'aspect 
-		mécanique des centrales nucléaires et même de les rendre davantage plus sécuritaires. Nous allons 
-		aussi nous pencher vers d'autres source d'énergie dont l'éolienne, étant donné qu'elles sont très 
-		peu efficace (amélioration de l'aspect mécanique).
-	</p>
 
-	<p>
-		Nous allons bientôt améliorer le site et ajouter plus de choses. Merci encore une fois 
-		d’avoir visité notre site!
-	</p>
+  <h1>{title}</h1>
 
-	<p>
-  		Si vous voulez nous rejoindre, voici un numéro de téléphone :
-  		<a href="tel:+15147803878">+1 (514) 780-3878</a>
-	</p>
-</Layout>
+  <p>
+    Un copieur professionnel est un équipement essentiel pour les entreprises,
+    administrations et espaces de coworking ayant un volume d’impression important.
+  </p>
+
+  <h2>Pourquoi investir dans un copieur professionnel ?</h2>
+
+  <ul>
+    <li>Vitesse d’impression élevée</li>
+    <li>Coût par page réduit</li>
+    <li>Fonctions scanner et fax intégrées</li>
+    <li>Gestion réseau avancée</li>
+  </ul>
+
+  <h2>Critères de choix</h2>
+
+  <p>
+    Avant d’acheter ou louer un copieur, analysez :
+  </p>
+
+  <ol>
+    <li>Le volume mensuel d’impression</li>
+    <li>La vitesse (pages par minute)</li>
+    <li>La capacité papier</li>
+    <li>La connectivité (Wi-Fi, Ethernet, Cloud)</li>
+    <li>Le coût des consommables</li>
+  </ol>
+
+  <h2>Achat ou location ?</h2>
+
+  <p>
+    La location est souvent idéale pour les entreprises souhaitant
+    maîtriser leur budget et bénéficier d’une maintenance incluse.
+  </p>
+
+</BlogPost>
