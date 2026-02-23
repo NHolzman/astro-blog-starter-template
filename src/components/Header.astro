@@ -19,11 +19,11 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 			<HeaderLink href="/projet">Projet actuel</HeaderLink>
 		</div>
 		<div class="burger-icon">
-			<!--label for="burgercheck">
+			<label for="burgercheck">
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" aria-hidden="true" class="lucide lucide-menu">
 					<path d="M4 5h16 M4 12h16 M4 19h16"></path>
 				</svg>
-			</label-->
+			</label>
 			<input type="checkbox" id="burgercheck">
 		</div>
 		<aside class="burger-panel">
@@ -90,6 +90,12 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 	.burger-panel {
 		display: none;
 	}
+	#burgercheck:checked {
+		background-color: #00c;
+	}
+	#burgercheck:checked ~ .burger-panel {
+			display: block !important;
+	}
 	#logo {
 		min-width: 50px !important;
 		min-height: 50px !important;
@@ -121,13 +127,10 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		}
 	}
 	@media  (max-width: 540px) {
-		HeaderLink ~ * {
+		.internal-links a ~ *, .internal-links a.active ~ * {
 			display: none !important;
 		}
 		.burger-icon {
-			display: block !important;
-		}
-		#burgercheck:checked ~ .burger-panel {
 			display: block !important;
 		}
 	}
