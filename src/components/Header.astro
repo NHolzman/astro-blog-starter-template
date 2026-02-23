@@ -96,12 +96,13 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 	}
 	.burger-panel ul {
 		list-style-type: none;
+		line-height: 2.5;
 		background-color: white;
 		border-radius: 10px;
 		padding: 0 1em;
 	}
-	#burgercheck:checked ~ .burger-panel {
-		display: block !important;
+	.burger-panel a:hover {
+		background-color: gainsboro;
 	}
 	#logo {
 		min-width: 50px !important;
@@ -138,6 +139,9 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 			display: none !important;
 		}
 		#burgerlabel {
+			display: block;
+		}
+		#burgercheck:checked ~ .burger-panel {
 			display: block !important;
 		}
 	}
