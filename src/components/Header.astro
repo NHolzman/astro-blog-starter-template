@@ -91,14 +91,16 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 	}
 	.burger-panel {
 		display: none;
-		position: relative;
 		height: 100%;
+		position: relative;
+		translate: 100%;
+		transition: 0.25s;
 	}
 	.burger-panel ul {
 		list-style-type: none;
 		line-height: 2.5;
 		background-color: white;
-		border-radius: 10px;
+		border-radius: 0 0 0 30px;
 		padding: 0 1em;
 	}
 	.burger-panel a:hover {
@@ -142,7 +144,8 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 			display: block;
 		}
 		#burgercheck:checked ~ .burger-panel {
-			display: block !important;
+			display: block;
+			translate: 0%;
 		}
 	}
 	@media  (max-width: 420px) {
