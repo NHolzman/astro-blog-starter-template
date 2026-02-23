@@ -13,19 +13,17 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 			<a id="titre1" href="/home">{SITE_TITLE_1}</a>
 		</h2>
 		<div class="internal-links">
-			<!-- <HeaderLink href="/">Home</HeaderLink> -->
+			<!-- <HeaderLink href="/home">Home</HeaderLink> -->
 			<!-- <HeaderLink href="/blog">Blog</HeaderLink> -->
 			<HeaderLink href="/about">À propos</HeaderLink>
 			<HeaderLink href="/projet">Projet actuel</HeaderLink>
 		</div>
-		<div class="burger-icon">
-			<label for="burgercheck">
+		<label for="burgercheck" id="burgerlabel">
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" aria-hidden="true" class="lucide lucide-menu">
 					<path d="M4 5h16 M4 12h16 M4 19h16"></path>
 				</svg>
-			</label>
-			<input type="checkbox" id="burgercheck">
-		</div>
+		</label>
+		<input type="checkbox" id="burgercheck">
 		<aside class="burger-panel">
 				<ul>
 					<li>À propos</li>
@@ -83,18 +81,21 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		font-size: 0.85em;
 		height: 100%;
 	}
-	.burger-icon {
+	#burgercheck {
+		display: none;
+	}
+	#burgerlabel {
 		margin-left: auto;
 		display: none;
 	}
 	.burger-panel {
 		display: none;
 	}
-	#burgercheck:checked {
+	#burgercheck:checked ~ #burgerlabel {
 		background-color: #00c;
 	}
 	#burgercheck:checked ~ .burger-panel {
-			display: block !important;
+		display: block !important;
 	}
 	#logo {
 		min-width: 50px !important;
@@ -127,10 +128,10 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		}
 	}
 	@media  (max-width: 540px) {
-		.internal-links a ~ *, .internal-links a.active ~ * {
+		.internal-links a ~ *, HeaderLink a ~ * {
 			display: none !important;
 		}
-		.burger-icon {
+		#burgerlabel {
 			display: block !important;
 		}
 	}
