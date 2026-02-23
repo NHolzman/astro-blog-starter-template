@@ -90,7 +90,7 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		display: none;
 	}
 	.burger-panel {
-		display: none;
+		width: 0;
 		height: 100%;
 		position: relative;
 		translate: 100%;
@@ -101,7 +101,7 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		line-height: 2.5;
 		background-color: white;
 		border-radius: 0 0 0 30px;
-		padding: 0 1em;
+		padding: 0 1em 1em 1em;
 	}
 	.burger-panel a:hover {
 		background-color: gainsboro;
@@ -144,7 +144,7 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 			display: block;
 		}
 		#burgercheck:checked ~ .burger-panel {
-			display: block;
+			width: auto;
 			translate: 0%;
 		}
 	}
