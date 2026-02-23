@@ -24,12 +24,12 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 				</svg>
 		</label>
 		<input type="checkbox" id="burgercheck">
-		<aside class="burger-panel">
+		<div class="burger-panel">
 				<ul>
-					<li>À propos</li>
-					<li>Projet actuel</li>
+					<li><a href="/about">À propos</a></li>
+					<li><a href="/projet">Projet actuel</a></li>
 				</ul>
-		</aside>
+		</div>
 	</nav>
 </header>
 <style>
@@ -85,14 +85,20 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		display: none;
 	}
 	#burgerlabel {
+		padding-right: 1em;
 		margin-left: auto;
 		display: none;
 	}
 	.burger-panel {
 		display: none;
+		position: relative;
+		height: 100%;
 	}
-	#burgercheck:checked ~ #burgerlabel {
-		background-color: #00c;
+	.burger-panel ul {
+		list-style-type: none;
+		background-color: white;
+		border-radius: 10px;
+		padding: 0 1em;
 	}
 	#burgercheck:checked ~ .burger-panel {
 		display: block !important;
@@ -128,7 +134,7 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		}
 	}
 	@media  (max-width: 540px) {
-		.internal-links a ~ *, HeaderLink a ~ * {
+		.internal-links, .internal-links a ~ * {
 			display: none !important;
 		}
 		#burgerlabel {
