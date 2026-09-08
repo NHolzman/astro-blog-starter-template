@@ -39,7 +39,6 @@ body {
 	padding: 0;
 	text-align: left;
 	background: linear-gradient(var(--blue-gradient)) no-repeat;
-	/*background-size: 100% 600px;*/
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
