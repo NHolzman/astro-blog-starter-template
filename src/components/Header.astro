@@ -34,12 +34,15 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 </header>
 <style>
 	header {
+		position: fixed;
+		width: 100%;
 		margin: 0;
 		padding: 0 1em;
 		background: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
 		height: 4em;
 		align-content: center;
+		backdrop-filter: blur(10px);
 	}
 	h2 {
 		margin: 0;
@@ -66,7 +69,7 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 	}
 	nav a {
 		padding: 0 0.5em;
-		color: var(--black);
+		color: rgb(var(--black));
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
 		height: 95%;

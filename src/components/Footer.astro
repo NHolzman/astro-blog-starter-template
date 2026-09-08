@@ -3,7 +3,6 @@ const today = new Date();
 ---
 
 <footer>
-	&copy; {today.getFullYear()} Le comité pro-énergie nucléaire.
 	<div class="social-links">
 		<a href="https://www.instagram.com/pro_nuclear_energy/" target="_blank">
 			<span class="sr-only">Le lien Instagram</span>
@@ -46,6 +45,7 @@ const today = new Date();
 			>
 		</a>
 	</div>
+	&copy; {today.getFullYear()} Le comité pro-énergie nucléaire.
 </footer>
 <style>
 	footer {
@@ -59,6 +59,9 @@ const today = new Date();
 		justify-content: center;
 		gap: 1em;
 		margin-top: 1em;
+		border-bottom: 1px solid rgb(var(--gray-light));
+		margin-bottom: 2rem;
+		padding-bottom: 2rem;
 	}
 	.social-links a {
 		text-decoration: none;
