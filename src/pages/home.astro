@@ -16,6 +16,7 @@ import { SITE_TITLE_0, SITE_TITLE_1, SITE_DESCRIPTION, SITE_IMAGE } from '../con
 			<p id="intro-text">
 				Ceci est le site officiel du Comité pro-nucléaire de <a title="Cégep Gérald-Godin" href="https://www.cgodin.qc.ca/" target="_blank">GG</a>!<br> Merci de visiter notre site web. 
 			</p>
+			<hr style="border: 2px solid rgb(var(--gray));">
 			<section id="links">
 				<div class="grid">
 					<div class="grid-item">
@@ -35,6 +36,14 @@ import { SITE_TITLE_0, SITE_TITLE_1, SITE_DESCRIPTION, SITE_IMAGE } from '../con
 					</div>
 				</div>
 			</section>
+			<hr style="border: 2px solid rgb(var(--gray));">
+			<section class="specs">
+				<div class="specs-visual">
+				</div>
+				<div class="specs-content">
+					<h2>Caractéristiques</h2>
+				</div>
+			</section>
 		</main>
 		<Footer />
 	</body>
@@ -44,7 +53,19 @@ import { SITE_TITLE_0, SITE_TITLE_1, SITE_DESCRIPTION, SITE_IMAGE } from '../con
 		}
 		#links {
 			padding: 6rem 0;
-			border-top: 2px solid rgb(var(--gray));
+		}
+		.specs {
+			display: flex;
+			align-items: center;
+			gap: 4rem;
+		}
+		.specs-visual {
+			background: rgb(var(--gray-light));
+			border: 1px solid rgb(var(--gray));
+			border-radius: 1.5rem;
+		}
+		.specs-content {
+			width: 50%;
 		}
 		.grid {
 			display: grid;
