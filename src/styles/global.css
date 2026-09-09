@@ -51,8 +51,8 @@ main {
 	max-width: calc(100% - 2em);
 	margin: auto;
 	padding: 3em 1em;
-	padding-top: 8rem;
 	min-height: 50vh;
+	translate: 0 4em; /*Leave space for the header*/
 }
 h1,
 h2,
