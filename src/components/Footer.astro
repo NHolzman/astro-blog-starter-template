@@ -85,14 +85,15 @@ const today = new Date();
 </footer>
 <style>
 	footer {
-		padding: 2em 1em 6em 1em;
+		margin-top: 2em;
+    	padding: 0.5em 1em 1em;
 		background: linear-gradient(var(--gray-gradient));
 		color: rgb(var(--gray));
-		text-align: center;
 		border-top: 3px solid;
 	}
 	.footer-container {
 		max-width: 720px
+		margin: auto;
 	}
 	.footer-section h4 {
 		text-align: left;
@@ -129,7 +130,8 @@ const today = new Date();
 	.footer-low {
 		display: flex;
 		flex-wrap: wrap;
-    	justify-content: space-between;
+		flex-direction: column;
+		align-content: center;
 	}
 	.social-links a {
 		text-decoration: none;
