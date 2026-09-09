@@ -1,11 +1,13 @@
 ---
+import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 const today = new Date();
 ---
 
 <footer>
 	<div class="footer-grid">
 		<div class="footer-title">
-			<h4>Le comité pro-énergie nucléaire</h4>
+			<h4>{SITE_TITLE_0}</h4>
+			<h4>{SITE_TITLE_1}</h4>
 		</div>
 		<div class="footer-section">
 			<h4>Nos projets</h4>
@@ -38,7 +40,7 @@ const today = new Date();
 	</div>
 	<hr>
 	<div class="footer-low">
-		&copy; {today.getFullYear()}, Le comité pro-énergie nucléaire.
+		&copy; {today.getFullYear()}, {SITE_TITLE_0} {SITE_TITLE_1}.
 		<div class="social-links">
 			<a href="https://www.instagram.com/pro_nuclear_energy/" target="_blank">
 				<span class="sr-only">Le lien Instagram</span>
@@ -114,11 +116,19 @@ const today = new Date();
 	.footer-list {
 		list-style: none;
 		text-align: left;
-		font-size: 17px
+		font-size: 17px;
+	}
+	.footer-list a {
+		text-decoration: none;
+		transition: 0.2s;
+	}
+	.footer-list a:hover {
+		color: rgb(var(--white));
+    	text-shadow: 0 0 5px rgb(var(--accent-dark));
 	}
 	.footer-newsletter {
 		display: flex;
-		justify-content: center;
+		justify-content: left;
 	}
 	.footer-low {
 		display: flex;
