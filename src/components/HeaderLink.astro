@@ -15,6 +15,7 @@ const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
 <style>
 	a {
 		z-index: 1;
+		position: relative;
 		display: inline-block;
 		text-decoration: none;
 		transition: 0.3s;
@@ -23,6 +24,8 @@ const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
 		content: "";
 		z-index: -1;
 		position: absolute;
+		left: 0;
+		top: 0;
 		width:100%;
     	height:100%;
 		background-image: url("/blog-placeholder-2.jpg");
@@ -30,6 +33,7 @@ const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
 		background-position: center;
 		background-repeat: no-repeat;
 		opacity: 0.01;
+		border-bottom: 4px solid rgb(var(--accent));
 		transition: 0.3s;
 	}
 	a:hover {
