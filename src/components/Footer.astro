@@ -110,7 +110,7 @@ const today = new Date();
 	}
 	.footer-grid {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		repeat(auto-fit, minmax(200px, auto))
 		gap: 3rem;
 	}
 	.footer-list {
@@ -132,6 +132,7 @@ const today = new Date();
 	}
 	.footer-low {
 		display: flex;
+		flex-wrap: wrap;
     	justify-content: space-between;
 	}
 	.social-links a {
