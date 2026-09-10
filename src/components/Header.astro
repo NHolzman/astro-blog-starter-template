@@ -23,6 +23,7 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 					<path d="M4 5h16 M4 12h16 M4 19h16"></path>
 				</svg>
 		</label>
+		<input type="checkbox" id="themecheck">
 		<input type="checkbox" id="burgercheck">
 		<div class="burger-panel">
 				<ul>
@@ -43,6 +44,16 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
 		height: 4em;
 		align-content: center;
+	}
+	header:before {
+		z-index: -1;
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: transparent;
 		backdrop-filter: blur(10px);
 	}
 	h2 {
