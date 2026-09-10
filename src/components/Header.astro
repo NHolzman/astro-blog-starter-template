@@ -18,12 +18,17 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 			<HeaderLink href="/about">À propos</HeaderLink>
 			<HeaderLink href="/projet">Projet actuel</HeaderLink>
 		</div>
+		<label for="themecheck" id="themelabel">
+			<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            	<path d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,20.5 L12,3.5 C16.6944204,3.5 20.5,7.30557963 20.5,12 C20.5,16.6944204 16.6944204,20.5 12,20.5 Z"></path>
+			</svg>
+		</label>
+		<input type="checkbox" id="themecheck">
 		<label for="burgercheck" id="burgerlabel">
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" aria-hidden="true" class="lucide lucide-menu">
 					<path d="M4 5h16 M4 12h16 M4 19h16"></path>
 				</svg>
 		</label>
-		<input type="checkbox" id="themecheck">
 		<input type="checkbox" id="burgercheck">
 		<div class="burger-panel">
 				<ul>
@@ -96,7 +101,7 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		font-size: 0.85em;
 		height: 100%;
 	}
-	#burgercheck {
+	#burgercheck, #themecheck {
 		display: none;
 	}
 	#burgerlabel {
@@ -116,7 +121,8 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		line-height: 2.5;
 		background-color: transparent;
 		border-radius: 0 0 0 30px;
-		padding: 0 1em 1em 1em;
+		padding: 1em;
+		translate: 0 -1em; /*Align with top of header*/
 		backdrop-filter: blur(10px);
 	}
 	.burger-panel a:hover {
