@@ -46,7 +46,7 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		margin: 0;
 		padding: 0 1em;
 		background: transparent;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		box-shadow: 0 2px 8px color-mix(var(--black) 5%, transparent);
 		height: 4em;
 		align-content: center;
 	}
@@ -69,7 +69,7 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		align-content: center;
 	}
 	h2:hover {
-		text-shadow: 0 0 8px rgba(0, 255, 200, 0.55);
+		text-shadow: 0 0 8px var(--green-shadow);
 	}
 
 	h2 a,
@@ -86,7 +86,7 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 	}
 	nav a {
 		padding: 0 0.5em;
-		color: rgb(var(--black));
+		color: var(--black);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
 		height: 95%;
@@ -128,8 +128,10 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		translate: 0 -1em; /*Align with top of header*/
 		backdrop-filter: blur(10px);
 	}
-	.burger-panel a:hover {
-		background-color: gainsboro;
+	.burger-panel li:hover {
+		background-color: color-mix(var(--gainsboro) 25%, transparent);
+		border: 1px;
+		border-radius: 5px;
 	}
 	#logo {
 		min-width: 50px !important;
@@ -146,7 +148,7 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 	h2:hover #logo {
 		scale: 1.05;
 		border-radius: 50%;
-		border-color: #00ff73;
+		border-color: var(--green);
 	}
 	@media  (max-width: 625px) {
 		header {

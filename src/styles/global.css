@@ -5,19 +5,22 @@
  */
 
 :root {
-	--accent: 56, 63, 136;
-	--accent-dark: 0, 13, 138;
-	--black: 15, 18, 25;
-	--blue-light: 172, 227, 255;
-	--blue-gradient: #fff, rgb(var(--blue-light));
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--white: 240, 245, 255;
+	--accent: #383F88;
+	--accent-dark: #000D8A;
+	--black: #0F1219;
+	--blue-light: #ACE3FF;
+	--blue-gradient: #fff, var(--blue-light);
+	--gainsboro: gainsboro;
+	--gray: #60739F;
+	--gray-light: #E5E9F0;
+	--gray-dark: #222939;
+	--gray-gradient: color-mix(var(--gray-light) 50%, transparent), #fff;
+	--green: #00ff73;
+	--green-shadow: color-mix(#00FFC8 55%, transparent);
+	--white: #F0F5FF;
 	--box-shadow:
-		0 2px 6px rgba(var(--accent), 25%), 0 8px 24px rgba(var(--accent), 33%),
-		0 16px 32px rgba(var(--accent), 33%);
+		0 2px 6px color-mix(var(--accent) 25%, transparent), 0 8px 24px color-mix(var(--accent) 33%, transparent),
+		0 16px 32px color-mix(var(--accent) 33%, transparent);
 }
 @font-face {
 	font-family: "Atkinson";
@@ -41,7 +44,7 @@ body {
 	background: linear-gradient(var(--blue-gradient)) no-repeat;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
+	color: var(--gray-dark);
 	font-size: 20px;
 	line-height: 1.7;
 	transition: 0.1s;
@@ -61,7 +64,7 @@ h4,
 h5,
 h6 {
 	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
+	color: var(--black);
 	line-height: 1.2;
 }
 h1 {
@@ -84,10 +87,10 @@ b {
 	font-weight: 700;
 }
 a {
-	color: rgb(var(--accent));
+	color: var(--accent);
 }
 a:hover {
-	color: rgb(var(--accent));
+	color: var(--accent);
 }
 p {
 	margin-bottom: 1em;
@@ -112,7 +115,7 @@ img {
 }
 code {
 	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
+	background-color: var(--gray-light);
 	border-radius: 2px;
 }
 pre {
@@ -123,14 +126,14 @@ pre > code {
 	all: unset;
 }
 blockquote {
-	border-left: 4px solid rgb(var(--accent));
+	border-left: 4px solid var(--accent);
 	padding: 0 0 0 20px;
 	margin: 0px;
 	font-size: 1.333em;
 }
 hr {
 	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
+	border-top: 1px solid var(--gray-light);
 }
 @media (max-width: 720px) {
 	body {
