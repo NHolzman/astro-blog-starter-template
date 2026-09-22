@@ -195,7 +195,22 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 </style>
 <script>
 	const themeCheck = document.getElementById("themecheck");
+	//check for value on page load
+	let darkMode = localStorage.getItem("darkMode") == "true";
+	if(darkMode){
+		toggleDarkMode(); //I'm assuming your page starts in light mode, so a call to toggle should switch everything over!
+	}
+	
+	//new wrapper function
+	const toggleDarkMode = () => {
+		document.body.classList.toggle("theme-dark");
+	}
+	const updateDarkMode = () => {
+		darkMode = !darkMode; //invert our variable
+		localStorage.setItem("darkMode", darkMode); //save it in local storage
+		toggleDarkMode(); //now update our styles!
+	}
 	themeCheck.addEventListener("change", () => {
-        document.body.classList.toggle("theme-dark");
+        updateDarkMode();
     });
 </script>
