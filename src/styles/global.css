@@ -23,22 +23,25 @@
 		0 16px 32px color-mix(var(--accent) 33%, transparent);
 }
 .theme-dark {
-	--accent: #383F88;
-	--accent-dark: #0019fa;
-	--black: #cdd7ec;
-	--blue-light: #ACE3FF;
-	--blue-gradient: #000, var(--blue-light);
+	--accent: #6672f3;
+	--accent-dark: #77aaff;
+	--black: #dde8ff;
+	--blue-light: #0312a9;
+	--blue-gradient: var(--blue-light), #000;
 	--gainsboro: rgb(82, 82, 82);
 	--gray: #60739F;
 	--gray-light: #222939;
 	--gray-dark: #E5E9F0;
 	--gray-gradient: color-mix(var(--gray-light) 50%, transparent), #000;
 	--green: #00ff73;
-	--green-shadow: color-mix(#00FFC8 55%, transparent);
+	--green-shadow: color-mix(#003328 55%, transparent);
 	--white: #0a0f1a;
 	--box-shadow:
 		0 2px 6px color-mix(var(--accent) 25%, transparent), 0 8px 24px color-mix(var(--accent) 33%, transparent),
 		0 16px 32px color-mix(var(--accent) 33%, transparent);
+}
+.theme-dark body {
+	background: radial-gradient(var(--blue-gradient)) no-repeat;
 }
 @font-face {
 	font-family: "Atkinson";
