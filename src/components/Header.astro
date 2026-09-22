@@ -25,7 +25,7 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
             	<path d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,20.5 L12,3.5 C16.6944204,3.5 20.5,7.30557963 20.5,12 C20.5,16.6944204 16.6944204,20.5 12,20.5 Z"></path>
 			</svg>
 		</label>
-		<input type="checkbox" id="themecheck">
+		<input type="checkbox" id="themecheck" onclick="darkMode()">
 		<label for="burgercheck" id="burgerlabel">
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" aria-hidden="true" class="lucide lucide-menu">
 					<path d="M4 5h16 M4 12h16 M4 19h16"></path>
@@ -37,7 +37,7 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 					<li><a href="/about">À propos</a></li>
 					<li><a href="/contact">Nous contacter</a></li>
 					<li><a href="/projet">Projet actuel</a></li>
-					<li><a href="https://critique.pronucleaire.org/">Critique de PCB</a></li>
+					<li><a href="https://critique.pronucleaire.org/" target="_blank">Critique de PCB</a></li>
 				</ul>
 		</div>
 	</nav>
@@ -193,3 +193,8 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 		}
 	}
 </style>
+<script>
+	function darkMode() {
+  		document.body.classList.toggle("theme-dark");
+	}
+</script>
