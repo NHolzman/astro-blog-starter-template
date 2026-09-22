@@ -34,14 +34,11 @@
 	--gray-dark: #E5E9F0;
 	--gray-gradient: color-mix(var(--gray-light) 50%, transparent), #000;
 	--green: #00ff73;
-	--green-shadow: color-mix(#003328 55%, transparent);
+	--green-shadow: color-mix(#003328 99%, transparent);
 	--white: #0a0f1a;
 	--box-shadow:
 		0 2px 6px color-mix(var(--accent) 25%, transparent), 0 8px 24px color-mix(var(--accent) 33%, transparent),
 		0 16px 32px color-mix(var(--accent) 33%, transparent);
-}
-.theme-dark body {
-	background: radial-gradient(var(--blue-gradient)) no-repeat;
 }
 @font-face {
 	font-family: "Atkinson";
@@ -69,6 +66,9 @@ body {
 	font-size: 20px;
 	line-height: 1.7;
 	transition: 0.1s;
+}
+body.theme-dark {
+	background: radial-gradient(var(--blue-gradient)) no-repeat;
 }
 main {
 	width: 720px;
