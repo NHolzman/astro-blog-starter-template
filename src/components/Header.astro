@@ -75,7 +75,7 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 	h2:hover {
 		text-shadow: 0 0 8px var(--green-shadow);
 	}
-	.theme-dark h2:hover {
+	body.theme-dark h2:hover {
 		text-shadow: 0 0 8px var(--green);
 	}
 
@@ -160,10 +160,15 @@ import { SITE_TITLE_0, SITE_TITLE_1 } from '../consts';
 	}
 	@media  (max-width: 1020px) {
 		#logo {
-			translate: -100% -12.5% !important;
+			translate: -100% -25% !important;
 		}
 		h2 {
 			margin-right: 5%;
+		}
+	}
+	@media  (max-width: 965px) {
+		#logo {
+			translate: -100% -12.5% !important;
 		}
 	}
 	@media  (max-width: 650px) {
